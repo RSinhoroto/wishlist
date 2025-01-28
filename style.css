@@ -25,7 +25,8 @@ body {
     width: var(--box-width); 
     height: var(--box-height); 
     z-index: 2; 
-    background-color: blueviolet;
+    background-image: url("images/notebooks.png");
+    background-size: cover;
   }
 
   .baa {
@@ -35,5 +36,6 @@ body {
     width: var(--box-width); 
     height: var(--box-height); 
     z-index: 2; 
-    background-color: aqua;
+    background-image: url("images/haikyuu 10th.png");
+    background-size: cover;
   }
