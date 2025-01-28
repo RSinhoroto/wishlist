@@ -1,0 +1,39 @@
+:root {
+    --image-width: 95vw;
+    --image-height: calc(0.625*var(--image-width));
+    --box-width: calc(0.22*var(--image-width)); 
+    --box-height: calc(0.35*var(--image-height));
+  }
+
+body {
+    background-color: #35495e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    max-width: var(--image-width);
+    height: auto;
+}
+
+/* Change hardcoded positioning numbers to dynamically calculated according to VW */
+.foo {
+    position: absolute; 
+    left: calc(0.4525*var(--image-width)); 
+    top: calc(0.225*var(--image-height)); 
+    width: var(--box-width); 
+    height: var(--box-height); 
+    z-index: 2; 
+    background-color: blueviolet;
+  }
+
+  .baa {
+    position: absolute; 
+    left: calc(0.165*var(--image-width)); 
+    top: calc(0.0875*var(--image-height)); 
+    width: var(--box-width); 
+    height: var(--box-height); 
+    z-index: 2; 
+    background-color: aqua;
+  }
