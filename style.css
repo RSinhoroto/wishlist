@@ -1,6 +1,7 @@
 :root {
   --image-width: 95vw;
   --image-height: calc(0.625*var(--image-width));
+  --header-height: 27vh;
   --box-width: calc(0.22*var(--image-width));
   --box-height: calc(0.35*var(--image-height));
 }
@@ -12,16 +13,32 @@ body {
   justify-content: center;
 }
 
+.header {
+  padding: 1vh 0;
+  text-align: center;
+  background: #35495e;
+  color: #4683c2;
+  font-size: 5vh;
+  font-family: "Dancing Script", serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
 .board {
   max-width: var(--image-width);
   height: auto;
+  position: absolute;
+  top: var(--header-height);
 }
 
 /* Change hardcoded positioning numbers to dynamically calculated according to VW */
 .card1 {
   position: absolute;
   left: calc(0.165*var(--image-width));
-  top: calc(0.0875*var(--image-height));
+  top: calc(0.0875*var(--image-height) + var(--header-height));
   width: var(--box-width);
   height: var(--box-height);
   z-index: 2;
@@ -32,7 +49,7 @@ body {
 .card2 {
   position: absolute;
   left: calc(0.4525*var(--image-width));
-  top: calc(0.225*var(--image-height));
+  top: calc(0.225*var(--image-height) + var(--header-height));
   width: var(--box-width);
   height: var(--box-height);
   z-index: 4;
@@ -43,7 +60,7 @@ body {
 .card3 {
   position: absolute;
   left: calc(0.6325*var(--image-width));
-  top: calc(0.1075*var(--image-height));
+  top: calc(0.1075*var(--image-height) + var(--header-height));
   width: var(--box-width);
   height: var(--box-height);
   z-index: 2;
@@ -55,7 +72,7 @@ body {
 .card4 {
   position: absolute;
   left: calc(0.1955*var(--image-width));
-  top: calc(0.575*var(--image-height));
+  top: calc(0.575*var(--image-height) + var(--header-height));
   width: var(--box-width);
   height: var(--box-height);
   z-index: 2;
@@ -67,7 +84,7 @@ body {
 .card5 {
   position: absolute;
   left: calc(0.6525*var(--image-width));
-  top: calc(0.615*var(--image-height));
+  top: calc(0.615*var(--image-height) + var(--header-height));
   width: var(--box-width);
   height: var(--box-height);
   z-index: 2;
